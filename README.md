@@ -146,6 +146,8 @@ Helpful flags:
 - `--oauth-timeout <ms>` -- shorten/extend the OAuth browser wait; same as `MCPORTER_OAUTH_TIMEOUT_MS` / `MCPORTER_OAUTH_TIMEOUT`.
 - `--tail-log` -- stream the last 20 lines of any log files referenced by the tool response.
 - `--output <format>` or `--raw` -- control formatted output (defaults to pretty-printed auto detection).
+- `--raw-strings` (on `mcporter call`) -- keep numeric-looking argument values (for `key=value`, `key:value`, and trailing positional values) as strings.
+- `--no-coerce` (on `mcporter call`) -- keep all `key=value` and positional values as raw strings (disables bool/null/number/JSON coercion).
 - `--json` (on `mcporter list`) -- emit JSON summaries/counts instead of text. Multi-server runs report per-server statuses, counts, and connection issues; single-server runs include the full tool metadata.
 - `--output json/raw` (on `mcporter call`) -- when a connection fails, MCPorter prints the usual colorized hint and also emits a structured `{ server, tool, issue }` envelope so scripts can handle auth/offline/http errors programmatically.
 - `--json` (on `mcporter auth`) -- emit the same structured connection envelope whenever OAuth/transport setup fails, instead of throwing an error.
